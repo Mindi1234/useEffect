@@ -1,9 +1,9 @@
 const STORAGE_KEY = "products_cach";
 export const getProducts = async () => {
-    const cach = localStorage.getItem(STORAGE_KEY);
-    if(cach){
+    const cache = localStorage.getItem(STORAGE_KEY);
+    if(cache){
         console.log("returning from cache");
-        return JSON.parse(cach);
+        return JSON.parse(cache);
 
     }
     const response=await fetch('https://fakestoreapi.com/products')
